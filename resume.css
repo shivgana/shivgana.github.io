@@ -611,13 +611,13 @@ main article {
 
 
   /* Table */
-.JTable .ParametersRunButton {
+.Table .ParametersRunButton {
   height: 24px;
 }
-.JTable-inline-block {
+.Table-inline-block {
   display: flex;
 }
-.JTable {
+.Table {
   flex: 1;
   border: solid 1px #e6eaee;
   border-radius: 3px;
@@ -626,31 +626,31 @@ main article {
   flex-direction: column;
   margin: 10px;
 }
-.JTable.u-table-maxwidth {
+.Table.u-table-maxwidth {
   max-width: 50%;
 }
-.JTable-row {
+.Table-row {
   display: flex;
   flex-direction: row;
   border-top: solid 1px #e6eaee;
 }
-.JTable-row:first-child {
+.Table-row:first-child {
   border-top: none;
 }
-a.JTable-row--href {
+a.Table-row--href {
   color: inherit;
 }
-a.JTable-row--href:hover {
+a.Table-row--href:hover {
   color: inherit;
   text-decoration: inherit;
 }
-.JTable-row--rollOver {
+.Table-row--rollOver {
   cursor: pointer;
 }
-.JTable-row--rollOver:hover {
+.Table-row--rollOver:hover {
   background: #fafbfd;
 }
-.JTable-cell {
+.Table-cell {
   min-width: 0;
   height: 48px;
   display: flex;
@@ -658,22 +658,22 @@ a.JTable-row--href:hover {
   padding-left: 16px;
   padding-right: 16px;
 }
-a.JTable-cell,
-a.JTable-cell:hover,
-.JTable-cell a.unstyled-link {
+a.Table-cell,
+a.Table-cell:hover,
+.Table-cell a.unstyled-link {
   color: inherit;
   text-decoration: inherit;
 }
-.JTable-cell:first-child {
+.Table-cell:first-child {
   padding-left: 23px;
 }
-.JTable-cell:last-child {
+.Table-cell:last-child {
   padding-right: 23px;
 }
-.JTable-cell .actions-container {
+.Table-cell .actions-container {
   position: relative;
 }
-.JTable-cell .actions-container:after {
+.Table-cell .actions-container:after {
   position: absolute;
   content: " ";
   pointer-events: none;
@@ -684,41 +684,42 @@ a.JTable-cell:hover,
   width: calc(76%);
   height: 100%;
 }
-.JTable-row--rollOver:hover .JTable-cell .actions-container:after {
+.Table-row--rollOver:hover .Table-cell .actions-container:after {
   background-color: #fafbfd;
 }
-.JTable-row--rollOver:hover .JTable-cell .actions-container:after {
+.Table-row--rollOver:hover .Table-cell .actions-container:after {
   background-color: transparent;
 }
-.JTable-cell .actions-container .ParametersRunButton,
-.JTable-cell .actions-container .history-button-component,
-.JTable-cell .actions-container .jenkins-pipeline-branches-list-action,
-.JTable-cell .actions-container .jenkins-pipeline-branches-list-action > div {
+.Table-cell .actions-container .ParametersRunButton,
+.Table-cell .actions-container .history-button-component,
+.Table-cell .actions-container .jenkins-pipeline-branches-list-action,
+.Table-cell .actions-container .jenkins-pipeline-branches-list-action > div {
   display: inline-block;
   vertical-align: middle;
 }
-.TableCell--actions .JTable-cell-contents {
+.TableCell--actions .Table-cell-contents {
   display: flex;
   justify-content: flex-end;
   flex-wrap: nowrap;
 }
-.JTable-cell-contents {
+.Table-cell-contents {
   display: flex;
   align-items: center;
   width: 100%;
   height: 100%;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.Table-cell-contents .text-with-ellipsis-container {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.JTable-cell-contents .text-with-ellipsis-container {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.JTable-header {
+.Table-header {
   color: rgba(53, 64, 82, 0.5);
   font-size: 12px;
   text-transform: uppercase;
   font-weight: bold;
 }
+
