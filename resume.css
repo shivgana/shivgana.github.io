@@ -1,0 +1,724 @@
+/* tags */
+#root {
+  font-size: 14px;
+}
+html,
+body,
+div#root {
+  height: 100%;
+}
+html {
+  font-family: sans-serif; 
+  line-height: 1.15; 
+  -ms-text-size-adjust: 100%; 
+  -webkit-text-size-adjust: 100%; 
+}
+body {
+  margin: 0;
+}
+body {
+  color: #4a4a4a;
+  text-rendering: optimizeSpeed;
+  font-feature-settings: "kern" on, "liga" off;
+  -moz-font-feature-settings: "kern" on, "liga" off;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.2;
+}
+body {
+  font-family: "LatoLatinWeb", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-family: "LatoLatinWebLight", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-size: 18px;
+  font-family: "LatoLatinWeb", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 14px;
+}
+h6 {
+  font-size: 12px;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+svg:not(:root) {
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+.svg-icon {
+    display: inline-block;
+    vertical-align: middle;
+    user-select: none;
+    fill: #ffffff;
+}
+
+.container-fluid {
+  padding: 0;
+}
+.Resume-header {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.Site-content {
+  flex: 1 0 auto;
+}
+section {
+  display: block;
+}
+.BasicHeader {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+.BasicHeader--default {
+  background: #4a90e2;
+  color: white;
+}
+.ContentPageHeader,
+.ResultPageHeader {
+  color: white;
+}
+.Header-topNav {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.Name-inner {
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.u-flex-grow {
+  flex-grow: 1;
+}
+.ContentPageHeader-user {
+  display: flex;
+  height: 100%;
+  padding-left: 1em;
+}
+.ContentPageHeader-user * {
+  margin-left: 1em;
+}
+.ContentPageHeader-user .user-component {
+  display: inline-block;
+  align-items: center;
+  height: 100%;
+}
+.ContentPageHeader-user .user-component.button-bar {
+  padding-top: 11px;
+}
+.layout-small {
+  font-size: 12px;
+}
+.layout-small a.btn-link {
+    padding: 5px 10px;
+}
+.layout-small .IconButton .IconButton-icon > * {
+  width: 16px;
+  height: 16px;
+}
+.inverse a.btn-link  {
+  display: inline-block;
+  border: solid 1px #ffffff;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  color: #ffffff;
+  cursor: pointer;
+}
+.inverse a.btn-link:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+}
+.inverse a.btn-link:focus {
+  outline: 0;
+  box-shadow: inset 0 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+main article {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.Header-details {
+  height: 72px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.ContentPageHeader-main,
+.ResultPageHeader-main {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.ContentPageHeader-main > * + *,
+.ResultPageHeader-main > * + * {
+  margin-left: 10px;
+}
+.RunDetailsHeader-sources, .RunDetailsHeader-times {
+    flex-basis: 20%;
+}
+.RunDetailsHeader-sources, .RunDetailsHeader-times {
+    height: 100%;
+    padding-top: 2px;
+}
+.RunDetailsHeader-times a,
+  .RunDetailsHeader-sources a {
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .RunDetailsHeader-times a:hover,
+  .RunDetailsHeader-sources a:hover {
+    text-decoration: underline;
+  }
+  .RunDetailsHeader-sources div,
+  .RunDetailsHeader-messages div,
+  .RunDetailsHeader-times div {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+  }
+  .RunDetailsHeader-sources div.causes,
+  .RunDetailsHeader-messages div.causes,
+  .RunDetailsHeader-times div.causes {
+    display: block;
+    max-width: 99.99%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .RunDetailsHeader-sources div svg + *,
+  .RunDetailsHeader-messages div svg + *,
+  .RunDetailsHeader-times div svg + * {
+    margin-left: 8px;
+  }
+  
+  .RunDetailsHeader-times .run-nav-container {
+    vertical-align: middle;
+  }
+  .RunDetailsHeader-times .run-nav-container span:first-child {
+    margin-left: 10px;
+  }
+  .RunDetailsHeader-sources {
+    height: 100%;
+    padding-top: 2px;
+  }
+  .RunDetailsHeader-sources div {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+  }
+  .RunDetailsHeader-sources div.causes {
+    display: block;
+    max-width: 99.99%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .RunDetailsHeader-sources div svg + * {
+    margin-left: 8px;
+  }
+  .RunDetailsHeader-sources {
+    flex-basis: 20%;
+  }
+  .RunDetailsHeader-sources .u-label-value label {
+    display: block;
+    width: -100%;
+    flex-shrink: 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .RunDetailsHeader-sources .u-label-value label.pullRequest {
+    display: block;
+    width: 85px;
+    flex-shrink: 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .RunDetailsHeader-sources .u-label-value span {
+    position: relative;
+    display: block;
+    padding-right: 17px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .RunDetailsHeader-sources .u-label-value span svg {
+    display: block;
+    fill: #ffffff;
+    opacity: 50%;
+    margin-left: 3px;
+  }
+  .RunDetailsHeader-sources .u-label-value span .inline-svg {
+    position: absolute;
+    right: 0;
+  }
+  .RunDetailsHeader-sources .u-label-value span .inline-svg svg {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+.u-label-value label {
+    font-weight: bold;
+  }
+
+.Header-pageTabs {
+  height: 100%;
+  display: flex;
+}
+.Header-pageTabs a {
+  color: white;
+  display: flex;
+  padding: 0 20px;
+  height: 100%;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0);
+}
+.Header-pageTabs a:hover {
+  text-decoration: none;
+  color: white;
+}
+.Header-pageTabs a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  height: 3px;
+  transition-timing-function: ease-out;
+  transition-duration: 0.2s;
+  transform: translateY(3px);
+  transition-property: transform;
+}
+.Header-pageTabs a:hover:before,
+.Header-pageTabs a.selected:before,
+.Header-pageTabs:hover a.selected:hover:before {
+  transform: translateY(0);
+}
+.Header-pageTabs:hover a.selected:before {
+  transform: translateY(3px);
+}
+.selected {
+    font-weight: bold;
+}
+
+/* Summary */
+.log-header {
+  font-family: "LatoLatinWeb", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.log-header__section {
+  display: flex;
+  align-items: center;
+}
+.log-header__section a {
+  padding-left: 10px;
+}
+.logConsole .result-item-children {
+    background-color: #333333;
+    border: none;
+    padding: 0;
+  }
+  .logConsole .result-item-title .result-item-expando {
+    flex-shrink: 0;
+  }
+  .logConsole .result-item-title .result-item-extra-info {
+    flex-shrink: 0;
+    margin-left: 10px;
+  }
+  .logConsole .result-item-title .result-item-label {
+    display: flex;
+    min-width: 0;
+  }
+  .logConsole .result-item-title .result-item-label .result-item-label-desc {
+    max-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .logConsole .result-item-title .result-item-label .result-item-label-name {
+    color: #a4a4a4;
+    white-space: nowrap;
+    margin-left: 10px;
+  }
+  .result-item + .result-item .result-item-head {
+  border-top: 0;
+}
+.result-item-head {
+  display: flex;
+  align-items: stretch;
+  background-color: white;
+  cursor: pointer;
+  border: solid 1px #e4e4e4;
+  position: sticky;
+  top: 0;
+}
+.result-item-icon {
+  display: flex;
+  align-items: flex-start;
+  margin: -1px 0 -1px -1px;
+  transform: translateZ(0);
+}
+.result-item-icon .spinAnimation {
+  animation: progress-spinner-rotate 4s linear;
+  animation-iteration-count: infinite;
+}
+.result-item-title {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+.result-item-extra-info {
+  padding-right: 0.6em;
+}
+.result-item-label {
+  flex: 1 1 auto;
+  font-family: "LatoLatinWeb", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.result-item-head:hover {
+  background: #f8f8f8;
+}
+.result-item-expando {
+  cursor: pointer;
+}
+.result-item-expando.expanded .expando-glyph {
+  transform: rotate(90deg);
+  transition: transform 150ms ease-in;
+}
+.result-item-expando.disabled .expando-glyph {
+  opacity: 0.3;
+}
+
+.result-bg.success {
+  background: #8cc04f;
+  border-bottom: 1px solid rgba(114, 162, 58, 0.5);
+}
+.result-status-glyph {
+  stroke: none;
+  fill: #fff;
+}
+.RunDetails-content .RunDetails-Description {
+    margin-bottom: 24px;
+  }
+.Alert {
+    font-size: 14px;
+    min-height: 48px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: solid 1px #e6eaee;
+    display: flex;
+    align-items: stretch;
+}
+.Alert.Info {
+  border-left-color: #4c9bd5;
+  color: #4c9bd5;
+}
+.Alert.Info .border {
+  background-color: #4c9bd5;
+}
+.Alert .title-div {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+}
+.Alert .title {
+    padding-left: 24px;
+    font-weight: bold;
+}
+.Alert .message {
+    color: #4a4a4a;
+    line-height: 1.71;
+    padding: 10px;
+}
+
+/* Pipeline */
+.RunDetails-content {
+    margin: 24px 42px;
+  }
+  .RunDetails-content .RunDetails-Description {
+    margin-bottom: 24px;
+  }
+  .RunDetails-content .download-log-button .restart-stage {
+    display: inline-block;
+    text-decoration: underline;
+    margin-right: 5px;
+  }
+  .RunDetails-content .download-log-button .restart-stage svg {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+  
+  .categories-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: auto;
+    margin-bottom: 16px;
+  }
+  .categories-container * {
+    box-sizing: border-box;
+  }
+  .categories-container .categories-pipeline {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .categories-line {
+    stroke: #949393;
+  }
+  .categories-node-terminal {
+    fill: #949393;
+  }
+  .categories-line-skipped {
+    stroke: #949393;
+    stroke-opacity: 0.25;
+  }
+.PWGx-pipeline-selection-highlight circle {
+    fill: none;
+    stroke: #4a90e2;
+  }
+    .categories-node-solid {
+    transform: translateZ(0);
+  }
+  .categories-node-solid > circle.statusColor.success {
+    fill: #8cc04f;
+  }
+  .categories-node-solid > circle.statusColor.failure {
+    fill: #d54c53;
+  }
+  .categories-node-solid > circle.statusColor.unstable {
+    fill: #f6b44b;
+  }
+  .categories-node-solid > circle.statusColor.aborted {
+    fill: #949393;
+  }
+  .categories-node-solid > circle.statusColor.paused {
+    fill: #24b0d5;
+  }
+  .categories-node-solid > circle.statusColor.unknown {
+    fill: #d54cc4;
+  }
+  .pipeline-node-selected .categories-node-solid > circle.statusColor {
+    stroke: none;
+  }
+  circle.halo {
+    stroke: white;
+    fill: none;
+  }
+.categories-tick {
+    stroke: none;
+    fill: #fff;
+  }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Hover interaction for circles */
+.categories-node:hover circle.statusColor {
+  stroke: #4a90e2;
+  stroke-width: 2.5px;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+/* Selected stage label */
+.categories-node-label.selected {
+  
+  font-weight: bold;
+}
+
+/* Content section styling */
+.stage-section {
+  display: none;
+  padding: 20px;
+  border-radius: 6px;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/* activity */
+.activity-actions-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.ParametersRunButton {
+  display: inline-block;
+}
+
+
+  /* Table */
+.JTable .ParametersRunButton {
+  height: 24px;
+}
+.JTable-inline-block {
+  display: flex;
+}
+.JTable {
+  flex: 1;
+  border: solid 1px #e6eaee;
+  border-radius: 3px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+.JTable.u-table-maxwidth {
+  max-width: 50%;
+}
+.JTable-row {
+  display: flex;
+  flex-direction: row;
+  border-top: solid 1px #e6eaee;
+}
+.JTable-row:first-child {
+  border-top: none;
+}
+a.JTable-row--href {
+  color: inherit;
+}
+a.JTable-row--href:hover {
+  color: inherit;
+  text-decoration: inherit;
+}
+.JTable-row--rollOver {
+  cursor: pointer;
+}
+.JTable-row--rollOver:hover {
+  background: #fafbfd;
+}
+.JTable-cell {
+  min-width: 0;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+a.JTable-cell,
+a.JTable-cell:hover,
+.JTable-cell a.unstyled-link {
+  color: inherit;
+  text-decoration: inherit;
+}
+.JTable-cell:first-child {
+  padding-left: 23px;
+}
+.JTable-cell:last-child {
+  padding-right: 23px;
+}
+.JTable-cell .actions-container {
+  position: relative;
+}
+.JTable-cell .actions-container:after {
+  position: absolute;
+  content: " ";
+  pointer-events: none;
+  background-color: white;
+  transition: background-color 0.15s;
+  top: 0;
+  right: 24px;
+  width: calc(76%);
+  height: 100%;
+}
+.JTable-row--rollOver:hover .JTable-cell .actions-container:after {
+  background-color: #fafbfd;
+}
+.JTable-row--rollOver:hover .JTable-cell .actions-container:after {
+  background-color: transparent;
+}
+.JTable-cell .actions-container .ParametersRunButton,
+.JTable-cell .actions-container .history-button-component,
+.JTable-cell .actions-container .jenkins-pipeline-branches-list-action,
+.JTable-cell .actions-container .jenkins-pipeline-branches-list-action > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+.TableCell--actions .JTable-cell-contents {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+}
+.JTable-cell-contents {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.JTable-cell-contents .text-with-ellipsis-container {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.JTable-header {
+  color: rgba(53, 64, 82, 0.5);
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
